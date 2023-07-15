@@ -12,7 +12,7 @@ const Palindrome = () => {
 
 	//Iterate from i from start and j from the end, comparing values to reach middle, if nothing is different is a palindrome. (more efficient)
 	const isPalindromeSameString = (str) => {
-		const filtered = str.replace(/[^\w]/gi, '').toLowerCase();
+		const filtered = str.replace(/[^a-z]/gi, '').toLowerCase();
 		for (let i = 0, j = filtered.length - 1; i < j; i++, j--) {
 			if (filtered[i] !== filtered[j]) return false;
 		}
@@ -20,7 +20,7 @@ const Palindrome = () => {
 	};
 
 	const filterWord = (str) => {
-		return str.replace(/[^\w]/gi, '').toUpperCase();
+		return str.replace(/[^a-z]/gi, '').toUpperCase();
 	};
 
 	return (
